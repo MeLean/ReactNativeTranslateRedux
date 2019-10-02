@@ -1,16 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, Text } from "react-native";
+import { useSelector } from "react-redux";
 
 const HomeScreen = props => {
+  //console.log("Home Screen props: " + JSON.stringify(props));
+  let curTranslatedTexts = useSelector(state => state.languages.currentSet);
+
+  //console.log("curTranslatedTexts " + curTranslatedTexts);
+
+  useEffect(() => {
+    props.navigation.setParams({
+      title: curTranslatedTexts.homeScreen
+    });
+  }, [curTranslatedTexts]);
+
   return (
     <View>
-      <Text>HomeScreen</Text>
+      <Text>{curTranslatedTexts.langName}</Text>
     </View>
   );
 };
 
-HomeScreen.navigationOptions = {
-  headerTitle: "HomeScreen "
+HomeScreen.navigationOptions = navData => {
+  const title = navData.navigation.getParam("title");
+
+  return {
+    headerTitle: title
+  };
 };
 
 export default HomeScreen;

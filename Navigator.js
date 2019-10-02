@@ -11,7 +11,7 @@ const ScreenNavigator = createStackNavigator(
   {
     defaultNavigationOptions: {
       headerStyle: {
-        backgroundColor: "#fac"
+        backgroundColor: "#FA0"
       }
     }
   }
