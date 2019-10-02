@@ -25,9 +25,14 @@ const StartScreen = props => {
       <LanguagePicker />
 
       <Button
-        title={curTranslatedTexts.goHome || "home"}
+        title={curTranslatedTexts.goHome}
         onPress={() => {
-          props.navigation.navigate("home");
+          props.navigation.navigate({
+            routeName: "home",
+            params: {
+              title: curTranslatedTexts.homeScreen
+            }
+          });
         }}
       />
     </View>
