@@ -1,14 +1,16 @@
 export const Languages = {
   en: {
-    langName: "English",
     hello: "Hello",
+    langName: "English",
     goHome: "Navigate to Home",
-    startScreen: "StartScreen"
+    startScreen: "StartScreen",
+    homeScreen: "Home screen"
   },
   bg: {
-    langName: "Български",
     hello: "Здравей",
+    langName: "Български",
     goHome: "Навигирай към Home",
-    startScreen: "Начален Екран"
+    startScreen: "Стартиращ екран",
+    homeScreen: "Начален Екран"
   }
 };

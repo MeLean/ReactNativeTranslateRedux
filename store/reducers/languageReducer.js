@@ -1,25 +1,16 @@
 import { Languages } from "../../Languages.js";
 import { CHANGE_LANGUAGE } from "../actions/languageAction.js";
+const firstIndex = Object.keys(Languages)[0];
 
-let currentLang = Languages.en;
-const initialState = { current: currentLang };
+const initialState = {
+  currentSet: Languages[firstIndex],
+  currentLabel: firstIndex
+};
 
 const languageReducer = (state = initialState, action) => {
   if (action.type === CHANGE_LANGUAGE) {
-    switch (action.lang) {
-      case Languages.en.langName:
-        currentLang = Languages.en;
-        break;
-      case Languages.bg.langName:
-        currentLang = Languages.bg;
-        break;
-
-      default:
-        console.log("No language found for action.lang: " + action.lang);
-        return state;
-    }
-
-    return { ...state, current: currentLang };
+    state.currentSet = Languages[action.lang];
+    state.currentLabel = action.lang;
   }
 
   return state;
