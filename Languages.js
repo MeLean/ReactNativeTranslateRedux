@@ -9,8 +9,15 @@ export const Languages = {
   bg: {
     hello: "Здравей",
     langName: "Български",
-    goHome: "Навигирай към Home",
+    goHome: "Навигирай към Началo",
     startScreen: "Стартиращ екран",
     homeScreen: "Начален Екран"
+  },
+  de: {
+    hello: "Hallo",
+    langName: "Deutsch",
+    goHome: "Zum Anfang navigieren",
+    startScreen: "Startbildschirm",
+    homeScreen: "Anfangsbildschirm"
   }
 };

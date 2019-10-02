@@ -19,7 +19,7 @@ const StartScreen = props => {
   }, [curTranslatedTexts]);
 
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       <Text>{curTranslatedTexts.hello}</Text>
 
       <LanguagePicker />
@@ -35,7 +35,7 @@ const StartScreen = props => {
 };
 
 StartScreen.navigationOptions = navData => {
-  const title = navData.navigation.getParam("title") || "StartScreen";
+  const title = navData.navigation.getParam("title");
 
   return {
     headerTitle: title

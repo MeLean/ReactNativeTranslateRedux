@@ -128,7 +128,7 @@ const LanguagePicker = props => {
 
 const styles = StyleSheet.create({
   container: { width: "100%", height: 56, margin: 5 },
-  scrollView: { flex: 1, padding: 14 },
+  scrollView: { margin: 5 },
   textContainer: {
     textAlign: "center",
     fontSize: 24,
