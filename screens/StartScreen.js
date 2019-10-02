@@ -19,15 +19,20 @@ const StartScreen = props => {
   }, [curTranslatedTexts]);
 
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       <Text>{curTranslatedTexts.hello}</Text>
 
       <LanguagePicker />
 
       <Button
-        title={curTranslatedTexts.goHome || "home"}
+        title={curTranslatedTexts.goHome}
         onPress={() => {
-          props.navigation.navigate("home");
+          props.navigation.navigate({
+            routeName: "home",
+            params: {
+              title: curTranslatedTexts.homeScreen
+            }
+          });
         }}
       />
     </View>
@@ -35,7 +40,7 @@ const StartScreen = props => {
 };
 
 StartScreen.navigationOptions = navData => {
-  const title = navData.navigation.getParam("title") || "StartScreen";
+  const title = navData.navigation.getParam("title");
 
   return {
     headerTitle: title

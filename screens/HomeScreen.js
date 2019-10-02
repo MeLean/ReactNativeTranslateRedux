@@ -6,13 +6,11 @@ const HomeScreen = props => {
   //console.log("Home Screen props: " + JSON.stringify(props));
   let curTranslatedTexts = useSelector(state => state.languages.currentSet);
 
-  //console.log("curTranslatedTexts " + curTranslatedTexts);
-
-  useEffect(() => {
-    props.navigation.setParams({
-      title: curTranslatedTexts.homeScreen
-    });
-  }, [curTranslatedTexts]);
+  // useEffect(() => {
+  //   props.navigation.setParams({
+  //     title: curTranslatedTexts.homeScreen
+  //   });
+  // }, [curTranslatedTexts]);
 
   return (
     <View>
@@ -22,6 +20,7 @@ const HomeScreen = props => {
 };
 
 HomeScreen.navigationOptions = navData => {
+  // console.log("Home Screen navData " + navData.navigation.curTransl);
   const title = navData.navigation.getParam("title");
 
   return {
