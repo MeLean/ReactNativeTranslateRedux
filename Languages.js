@@ -19,5 +19,12 @@ export const Languages = {
     goHome: "Zum Anfang navigieren",
     startScreen: "Startbildschirm",
     homeScreen: "Anfangsbildschirm"
+  },
+  arab: {
+    hello: "مرحبا",
+    langName: "عربى",
+    goHome: "انتقل إلى المنزل",
+    startScreen: "بدء الشاشة",
+    homeScreen: "الشاشة الرئيسية"
   }
 };

@@ -20,7 +20,6 @@ const HomeScreen = props => {
 };
 
 HomeScreen.navigationOptions = navData => {
-  // console.log("Home Screen navData " + navData.navigation.curTransl);
   const title = navData.navigation.getParam("title");
 
   return {
