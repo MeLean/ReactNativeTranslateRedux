@@ -20,7 +20,7 @@ export const Languages = {
     startScreen: "Startbildschirm",
     homeScreen: "Anfangsbildschirm"
   },
-  arab: {
+  arb: {
     hello: "مرحبا",
     langName: "عربى",
     goHome: "انتقل إلى المنزل",
