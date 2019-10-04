@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { View, Text, Button } from "react-native";
 import { useSelector } from "react-redux";
-import LanguagePicker from "../components/LanguagePicker";
-import { Languages } from "../Languages";
+import LanguagePicker from "../translation_components/LanguagePicker";
+import { Languages } from "../translation_components/Languages";
 
 const StartScreen = props => {
   let curTranslatedTexts = useSelector(state => state.languages.currentSet);

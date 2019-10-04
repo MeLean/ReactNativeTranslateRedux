@@ -1,8 +1,8 @@
 import React from "react";
-import En from "./svgs/en.svg";
-import Bg from "./svgs/bg.svg";
-import De from "./svgs/de.svg";
-import Arab from "./svgs/arab.svg";
+import En from "./svgFlags/en.svg";
+import Bg from "./svgFlags/bg.svg";
+import De from "./svgFlags/de.svg";
+import Arab from "./svgFlags/arab.svg";
 
 export const Languages = {
   en: {
