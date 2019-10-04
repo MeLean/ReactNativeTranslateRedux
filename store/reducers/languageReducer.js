@@ -1,4 +1,4 @@
-import { Languages } from "../../Languages.js";
+import { Languages } from "../../translation_components/Languages.js";
 import { CHANGE_LANGUAGE } from "../actions/languageAction.js";
 const firstIndex = Object.keys(Languages)[0];
 

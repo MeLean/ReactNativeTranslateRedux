@@ -10,7 +10,7 @@ import {
   Text,
   StyleSheet
 } from "react-native";
-import { Languages } from "../Languages";
+import { Languages } from "./Languages";
 
 const LanguagePicker = props => {
   const translatedTexts = useSelector(state => state.languages.currentSet);
@@ -51,43 +51,6 @@ const LanguagePicker = props => {
     return <ActivityIndicator size="small" />;
   }
 
-  // let chosenLangKey;
-  // StorageIO.getItem("language")
-  //   .then(result => {
-  //     if (result) {
-  //       chosenLangKey = result;
-  //       //console.log("chosenLangKey in result: " + chosenLangKey);
-  //       return;
-  //     }
-  //     console.log("result: " + result);
-  //     chosenLangKey = "en";
-  //   })
-  //   .catch((chosenLangKey = "en"));
-
-  // //console.log("chosenLangKey " + chosenLangKey);
-
-  // const translatedTexts = Languages[chosenLangKey];
-  // //console.log("curTranslatedTexts: " + JSON.stringify(curTranslatedTexts));
-  // const [curLang, setCurLang] = useState(chosenLangKey);
-  // const [curTranslatedTexts, setCurTranslatedTexts] = useState(translatedTexts);
-
-  // const onLanguagePressHandler = lang => {
-  //   //console.log("clicked: " + lang + " curLang: " + curLang);
-  //   if (curLang === lang) {
-  //     return;
-  //   }
-
-  //   StorageIO.setItem("language", lang)
-  //     .then(() => {
-  //       setCurTranslatedTexts(Languages[lang]);
-  //       setCurLang(lang);
-  //       props.changeParentState(lang);
-  //     })
-  //     .catch(error => {
-  //       console.log(lang + " not saved!" + " " + error);
-  //     });
-  // };
-
   const languageIndicatorBuilder = lang => {
     return (
       <View style={{ flexWrap: "wrap", alignContent: "center" }}>
@@ -111,22 +74,6 @@ const LanguagePicker = props => {
         }
       </View>
     );
-  };
-
-  const iconLanguageBuilder = long => {
-    switch (long) {
-      case "en":
-        return <En width={props.iconsSize} height={props.iconsSize} />;
-      case "bg":
-        return <Bg width={props.iconsSize} height={props.iconsSize} />;
-      case "de":
-        return <De width={props.iconsSize} height={props.iconsSize} />;
-      case "arab":
-        return <Arab width={props.iconsSize} height={props.iconsSize} />;
-
-      default:
-        return null;
-    }
   };
 
   return (
