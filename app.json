@@ -21,7 +21,8 @@
       "supportsTablet": true
     },
     "packagerOpts": {
-      "sourceExts": ["js", "jsx", "svgx"],
+      "config": "metro.config.js",
+      "sourceExts": ["js", "jsx", "ts", "tsx", "svg"],
       "transformer": "node_modules/react-native-svg-transformer/index.js"
     }
   }

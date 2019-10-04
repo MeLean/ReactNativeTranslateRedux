@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { View, Text } from "react-native";
+import { View, Text, Dimensions, ImageBackground } from "react-native";
 import { useSelector } from "react-redux";
 
 const HomeScreen = props => {
@@ -13,8 +13,28 @@ const HomeScreen = props => {
   // }, [curTranslatedTexts]);
 
   return (
-    <View>
-      <Text>{curTranslatedTexts.langName}</Text>
+    <View style={{ justifyContent: "center", alignContent: "center", flex: 1 }}>
+      {curTranslatedTexts.flagIcon}
+      <View
+        style={{
+          width: "100%",
+          position: "absolute",
+          flex: 1,
+          alignItems: "center",
+          justifyContent: "center"
+        }}
+      >
+        <Text
+          style={{
+            textAlign: "center",
+            fontSize: 50,
+            borderColor: "#AAA",
+            borderWidth: 1
+          }}
+        >
+          {curTranslatedTexts.langName}
+        </Text>
+      </View>
     </View>
   );
 };
