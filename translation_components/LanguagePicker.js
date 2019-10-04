@@ -41,7 +41,7 @@ const LanguagePicker = props => {
           dispatch(changeLanguage(savedLang));
           return;
         }
-        throw error("error: There was no saved lang!");
+        throw error("error: There was no lang saved!");
       })
       .catch(error => {
         console.log("default lang is set to default, because " + error);
