@@ -14,7 +14,7 @@ export const Languages = {
     hello: "Hello",
     langName: "English",
     goHome: "Navigate to Home",
-    startScreen: "Star tScreen",
+    startScreen: "StartScreen",
     homeScreen: "Home screen"
   },
   bg: {
@@ -33,7 +33,7 @@ export const Languages = {
     startScreen: "Стартовый экран",
     homeScreen: "Начален экран"
   },
- 
+
   de: {
     flagIcon: <De width="100%" height="100%" />,
     hello: "Hallo",
