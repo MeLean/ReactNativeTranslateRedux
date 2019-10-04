@@ -22,7 +22,7 @@ const StartScreen = props => {
     <View style={{ flex: 1 }}>
       <Text>{curTranslatedTexts.hello}</Text>
 
-      <LanguagePicker />
+      <LanguagePicker iconsSize={40} />
 
       <Button
         title={curTranslatedTexts.goHome}

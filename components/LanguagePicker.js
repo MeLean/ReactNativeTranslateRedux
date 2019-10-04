@@ -1,8 +1,9 @@
 import React, { useCallback } from "react";
-import { ActivityIndicator, AsyncStorage } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
 import { changeLanguage } from "../store/actions/languageAction";
 import {
+  ActivityIndicator,
+  AsyncStorage,
   View,
   ScrollView,
   TouchableOpacity,
@@ -89,18 +90,43 @@ const LanguagePicker = props => {
 
   const languageIndicatorBuilder = lang => {
     return (
-      <Text
-        style={{
-          color:
-            lang === curLang
-              ? props.activeTextColor || "#FF0000"
-              : props.passiveTextColor || "#bebebe",
-          fontWeight: lang === curLang ? "bold" : "normal"
-        }}
-      >
-        {lang.toUpperCase()}
-      </Text>
+      <View style={{ flexWrap: "wrap", alignContent: "center" }}>
+        <Text
+          style={{
+            color:
+              lang === curLang
+                ? props.activeTextColor || "#FF0000"
+                : props.passiveTextColor || "#bebebe",
+            fontWeight: lang === curLang ? "bold" : "normal",
+            textAlign: "center"
+          }}
+        >
+          {lang.toUpperCase()}
+        </Text>
+        {
+          /* {iconLanguageBuilder(lang)} */
+          <View width={props.iconsSize} height={props.iconsSize}>
+            {Languages[lang].flagIcon}
+          </View>
+        }
+      </View>
     );
+  };
+
+  const iconLanguageBuilder = long => {
+    switch (long) {
+      case "en":
+        return <En width={props.iconsSize} height={props.iconsSize} />;
+      case "bg":
+        return <Bg width={props.iconsSize} height={props.iconsSize} />;
+      case "de":
+        return <De width={props.iconsSize} height={props.iconsSize} />;
+      case "arab":
+        return <Arab width={props.iconsSize} height={props.iconsSize} />;
+
+      default:
+        return null;
+    }
   };
 
   return (
@@ -127,7 +153,7 @@ const LanguagePicker = props => {
 };
 
 const styles = StyleSheet.create({
-  container: { width: "100%", height: 56, margin: 5 },
+  container: { width: "100%", height: 96, margin: 5 },
   scrollView: { margin: 5 },
   textContainer: {
     textAlign: "center",
