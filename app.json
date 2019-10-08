@@ -20,6 +20,9 @@
     "ios": {
       "supportsTablet": true
     },
+    "android": {
+      "package": "com.milen.translate.react"
+    },
     "packagerOpts": {
       "config": "metro.config.js",
       "sourceExts": ["js", "jsx", "ts", "tsx", "svg"],
